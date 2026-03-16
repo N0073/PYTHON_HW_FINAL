@@ -1,8 +1,8 @@
 import allure
 import pytest
-from api.client import api_client
-from data.test_data import TestData
-from config.settings import settings
+from api.client   import api_client
+from data.test_data  import TestData
+from config.settings  import settings
 
 @pytest.mark.api
 class TestMarketDeliveryAPI:

@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
-from api.client import APIClient
+from api.client import api_client
 from pages.main_page import MainPage
 from config.settings import settings
 
@@ -11,7 +11,7 @@ from config.settings import settings
 @pytest.fixture(scope="session")
 def api_client():
     """Фикстура для API клиента"""
-    return APIClient()
+    return api_client()
 
 
 @pytest.fixture(scope="function")
@@ -33,7 +33,6 @@ def driver(request):
         )
 
     yield driver
-
     driver.quit()
 
 
@@ -43,6 +42,5 @@ def main_page(driver):
     page = MainPage(driver)
     page.open_main_page()
     return page
-
 
 
