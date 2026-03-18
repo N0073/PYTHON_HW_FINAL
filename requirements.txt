@@ -4,5 +4,3 @@ pytest==9.0.2
 allure-pytest==2.15.3
 webdriver-manager==4.0.2
 python-dotenv==1.2.1
-pydantic==2.5.0
-typing-extensions==4.15.0

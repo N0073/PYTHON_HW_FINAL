@@ -1,12 +1,12 @@
 import allure
 import pytest
-from api.client   import api_client
+from api_client  import APIClient
 from data.test_data  import TestData
-from config.settings  import settings
+from config.setting import settings
 
 @pytest.mark.api
 class TestMarketDeliveryAPI:
-    """API тесты для Яндекс.Маркет Доставки"""
+    """API тесты Яндекс доставки"""
 
     @allure.title("Получить меню ресторана")
     @allure.severity(allure.severity_level.CRITICAL)

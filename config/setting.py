@@ -1,11 +1,6 @@
 import os
-from pydantic import BaseSettings
-from dotenv import load_dotenv
 
-load_dotenv()
-
-
-class Settings(BaseSettings):
+class Settings:
     # API Settings
     API_BASE_URL: str = "https://market-delivery.yandex.ru/api/v2"
 
@@ -25,5 +20,14 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
 
+        # config/endpoints.py
 
-settings = Settings()
+    ENDPOINTS = {
+        "menu": "/api/v1/menu",
+        "cart": "/api/v1/cart",
+        "order": "/api/v1/orders",
+        "restaurants": "/api/v1/restaurants",
+    }
+
+
+setting = Settings()

@@ -10,13 +10,14 @@ class TestData:
     }
 
     # UI Locators
-    SEARCH_INPUT = "input[data-testid='search-input']"
-    SEARCH_BUTTON = "button[data-testid='search-button']"
-    RESTAURANT_CARD = "div[data-testid='restaurant-card']"
-    MENU_SECTION = "section[data-testid='menu-section']"
-    WORKING_HOURS = "div[data-testid='working-hours']"
-    LOGIN_BUTTON = "button[data-testid='login-button']"
-    CART_ICON = "div[data-testid='cart-icon']"
+    SEARCH_INPUT = "input[data-test id='search-input']"
+    SEARCH_BUTTON = "button[data-test id='search-button']"
+    RESTAURANT_CARD = "div[data-test id='restaurant-card']"
+    MENU_SECTION = "section[data-test id='menu-section']"
+    WORKING_HOURS = "div[data-test id='working-hours']"
+    LOGIN_BUTTON = "button[data-test id='login-button']"
+    CART_ICON = "div[data-test id='cart-icon']"
+
 
     # Test Data
     SEARCH_QUERY = "Пицца"

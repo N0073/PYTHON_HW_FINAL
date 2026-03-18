@@ -1,10 +1,10 @@
-from pages.base_page import BasePage
 from data.test_data import TestData
 import allure
+from config.setting  import settings
 
+class MainPage():
+    """Page Object для главной страницы Яндекс маркет"""
 
-class MainPage:
-    """Page Object для главной страницы Яндекс.Маркет"""
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -12,8 +12,7 @@ class MainPage:
     @allure.step("Открыть главную страницу")
     def open_main_page(self):
         """Открывает главную страницу"""
-        self.open("https://market.yandex.ru")
-        self.accept_cookies()
+        self.open(settings.UI_BASE_URL)
 
     @allure.step("Поиск товара: {query}")
     def search_product(self, query: str):

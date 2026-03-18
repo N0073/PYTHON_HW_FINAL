@@ -1,14 +1,13 @@
 import requests
 import allure
 from typing import Dict, Any
-from config.settings import settings
+from config.setting import settings
 from data.test_data import TestData
 
-
 class APIClient:
-    """Клиент для работы с API Яндекс.Маркет Доставки"""
+    """Клиент для работы с API Яндекс доставки"""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.base_url = settings.API_BASE_URL
         self.headers = {
             "Authorization": f"Bearer {settings.TEST_USER_TOKEN}",
