@@ -4,7 +4,6 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from api_client.api_client import api_client
 from pages.main_page import MainPage
-from config.setting import settings
 
 @pytest.fixture(scope="session")
 def api_client():
@@ -40,5 +39,6 @@ def main_page(driver):
     page = MainPage(driver)
     page.open_main_page()
     return page
+
 
 

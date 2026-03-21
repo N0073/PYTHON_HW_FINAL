@@ -1,7 +1,7 @@
 import allure
 import pytest
-from api_client  import APIClient
-from data.test_data  import TestData
+from api_client import APIClien
+from data.test_data import TestData
 from config.setting import settings
 
 @pytest.mark.api
@@ -18,7 +18,7 @@ class TestMarketDeliveryAPI:
 
     @allure.title("Добавить товар в корзину")
     @allure.severity(allure.severity_level.CRITICAL)
-    def test_add_to_cart(self, api_client, setup_cart):
+    def test_add_to_cart(self, api_client):
         """Тест добавления товара в корзину"""
         response = api_client.add_to_cart(
             settings.TEST_PRODUCT_ID,
@@ -32,7 +32,7 @@ class TestMarketDeliveryAPI:
 
     @allure.title("Изменить количество товара в заказе")
     @allure.severity(allure.severity_level.NORMAL)
-    def test_update_order(self, api_client, setup_cart):
+    def test_update_order(self, api_client):
         """Тест изменения заказа"""
         # Сначала добавляем товар
         add_response = api_client.add_to_cart(
@@ -49,7 +49,7 @@ class TestMarketDeliveryAPI:
 
     @allure.title("Удалить заказ")
     @allure.severity(allure.severity_level.CRITICAL)
-    def test_delete_order(self, api_client, setup_cart):
+    def test_delete_order(self, api_client):
         """Тест удаления заказа"""
         # Сначала добавляем товар
         add_response = api_client.add_to_cart(
@@ -70,7 +70,7 @@ class TestMarketDeliveryAPI:
 
     @allure.title("Негативный тест: добавление товара с нулевым количеством")
     @allure.severity(allure.severity_level.NORMAL)
-    def test_add_with_zero_quantity(self, api_client, setup_cart):
+    def test_add_with_zero_quantity(self, api_client):
         """Негативный тест добавления товара с количеством 0"""
         response = api_client.add_to_cart(
             settings.TEST_PRODUCT_ID,

@@ -1,6 +1,5 @@
 import os
-
-class Settings:
+class settings:
     # API Settings
     API_BASE_URL: str = "https://market-delivery.yandex.ru/api/v2"
 
@@ -30,4 +29,5 @@ class Settings:
     }
 
 
-setting = Settings()
+setting = settings()
+

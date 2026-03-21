@@ -1,5 +1,5 @@
-import allure
 import pytest
+import allure
 from data.test_data import TestData
 
 
